@@ -8,8 +8,8 @@ $inner: 1100px;
 :root {
   // ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
 
-  --base-font-family: '';
-  --second-font-family: '';
+  --base-font-family: 'Zen Kaku Gothic New', sans-serif;
+  --en-font: 'Europa', sans-serif;
 
   // 余白
   --padding-pc: 25px;
@@ -24,6 +24,16 @@ $inner: 1100px;
   //色指定
   --black: #000;
   --white: #fff;
+  --base-color: #1a1a1a;
+  --bg-color: #ede5dc;
+  --blue: #11a4d8;
+  --gray: #d9d9d9;
+  --yellow: #beba3f;
+  --green: #94be6d;
+  --pink: #d78580;
+  --brown: #736357;
+  --teal: #7fb8a6;
+  --purple: #909ad3;
 }
 
 body {

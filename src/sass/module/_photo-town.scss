@@ -1,0 +1,95 @@
+@use 'global' as *;
+
+.photo-town {
+  padding: rem(100) 0;
+}
+
+.photo-town__inner {
+  max-width: rem(1289);
+  margin: 0 auto;
+  padding: 0 var(--padding-pc);
+}
+
+.photo-town__header {
+  margin-bottom: rem(60);
+  text-align: center;
+}
+
+.photo-town__title {
+  font-family: var(--base-font-family);
+  font-size: rem(48);
+  font-weight: var(--bold);
+  letter-spacing: rem(0.48);
+  line-height: normal;
+  margin-bottom: rem(20);
+  @include mq {
+    font-size: rem(32);
+    margin-bottom: rem(15);
+  }
+}
+
+.photo-town__subtitle {
+  font-family: var(--base-font-family);
+  font-size: rem(18);
+  font-weight: var(--bold);
+  letter-spacing: rem(0.18);
+  line-height: normal;
+}
+
+.photo-town__content {
+  display: grid;
+  gap: rem(40);
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: rem(60);
+  @include mq {
+    grid-template-columns: 1fr;
+    gap: rem(30);
+    margin-bottom: rem(40);
+  }
+}
+
+.photo-town__text {
+  font-family: var(--base-font-family);
+  font-size: rem(18);
+  font-weight: var(--regular);
+  line-height: 1.7;
+  @include mq {
+    font-size: rem(16);
+  }
+}
+
+.photo-town__gallery {
+  display: grid;
+  gap: rem(20);
+  grid-template-columns: 1fr 1fr;
+  @include mq {
+    grid-template-columns: 1fr;
+  }
+}
+
+.photo-town__img {
+  height: rem(459);
+  object-fit: cover;
+  width: 100%;
+  @include mq {
+    height: rem(250);
+  }
+}
+
+.photo-town__link {
+  align-items: center;
+  display: flex;
+  font-family: var(--base-font-family);
+  font-size: rem(14);
+  font-weight: var(--bold);
+  gap: rem(10);
+  justify-content: center;
+  line-height: normal;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.photo-town__link-icon {
+  height: rem(34);
+  width: rem(34);
+}

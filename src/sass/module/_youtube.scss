@@ -1,0 +1,44 @@
+@use 'global' as *;
+
+.youtube {
+  padding: rem(100) 0;
+  position: relative;
+}
+
+.youtube__bg {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.youtube__bg-img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.youtube__inner {
+  align-items: center;
+  display: flex;
+  height: rem(427);
+  justify-content: center;
+  margin: 0 auto;
+  max-width: rem(918);
+  padding: 0 var(--padding-pc);
+  position: relative;
+  z-index: 2;
+  @include mq {
+    height: rem(300);
+  }
+}
+
+.youtube__icon {
+  height: rem(128);
+  width: rem(128);
+  @include mq {
+    height: rem(80);
+    width: rem(80);
+  }
+}

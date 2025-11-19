@@ -1,0 +1,258 @@
+@use 'global' as *;
+
+.footer {
+  margin-top: rem(100);
+  position: relative;
+}
+
+.footer__bg {
+  height: rem(549);
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  @include mq {
+    height: rem(300);
+  }
+}
+
+.footer__bg-img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.footer__brown {
+  background-color: var(--brown);
+  padding-top: rem(549);
+  width: 100%;
+  @include mq {
+    padding-top: rem(300);
+  }
+}
+
+.footer__inner {
+  margin: 0 auto;
+  max-width: rem(1920);
+  padding: 0 var(--padding-pc);
+  position: relative;
+}
+
+.footer__info {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: rem(34);
+  display: grid;
+  gap: rem(20);
+  grid-template-columns: 1fr auto auto;
+  margin: rem(-138) auto 0;
+  max-width: rem(918);
+  padding: rem(40);
+  position: relative;
+  z-index: 2;
+  @include mq {
+    grid-template-columns: 1fr;
+    margin: rem(-100) auto 0;
+    padding: rem(30);
+    gap: rem(30);
+  }
+}
+
+.footer__info-content {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+}
+
+.footer__info-title {
+  font-family: var(--base-font-family);
+  font-size: rem(40);
+  font-weight: var(--bold);
+  line-height: 1.5;
+  @include mq {
+    font-size: rem(28);
+  }
+}
+
+.footer__info-address {
+  font-family: var(--base-font-family);
+  font-size: rem(18);
+  font-weight: var(--bold);
+  line-height: 1.5;
+  @include mq {
+    font-size: rem(16);
+  }
+}
+
+.footer__info-postal {
+  font-family: var(--base-font-family);
+  font-size: rem(18);
+  font-weight: var(--bold);
+  line-height: 1.5;
+  @include mq {
+    font-size: rem(16);
+  }
+}
+
+.footer__info-tel {
+  align-items: center;
+  display: flex;
+  font-family: var(--base-font-family);
+  font-size: rem(40);
+  font-weight: var(--bold);
+  gap: rem(10);
+  letter-spacing: rem(0.4);
+  line-height: 1.5;
+  @include mq {
+    font-size: rem(28);
+  }
+}
+
+.footer__info-tel-label {
+  font-family: var(--base-font-family);
+  font-size: rem(14);
+  font-weight: var(--bold);
+  line-height: 1.5;
+}
+
+.footer__info-tel-icon {
+  height: rem(40);
+  width: rem(40);
+  @include mq {
+    height: rem(30);
+    width: rem(30);
+  }
+}
+
+.footer__info-fax {
+  font-family: var(--base-font-family);
+  font-size: rem(18);
+  font-weight: var(--bold);
+  letter-spacing: rem(0.18);
+  line-height: 1.5;
+  @include mq {
+    font-size: rem(16);
+  }
+}
+
+.footer__info-logo {
+  height: rem(128);
+  width: rem(242);
+  @include mq {
+    height: rem(80);
+    width: rem(150);
+  }
+}
+
+.footer__info-logo-img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.footer__sns {
+  display: flex;
+  gap: rem(24);
+  @include mq {
+    position: static;
+    justify-content: center;
+    margin-top: rem(20);
+  }
+}
+
+.footer__sns-item {
+  height: rem(44);
+  width: rem(44);
+  @include mq {
+    height: rem(36);
+    width: rem(36);
+  }
+}
+
+.footer__sns-item-img {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.footer__nav {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(20);
+  justify-content: center;
+  padding: rem(60) 0 rem(40);
+  @include mq {
+    padding: rem(40) 0 rem(30);
+    gap: rem(15);
+  }
+}
+
+.footer__nav-item {
+  align-items: center;
+  display: flex;
+  gap: rem(10);
+  padding: 0 rem(4);
+}
+
+.footer__nav-item-icon {
+  height: rem(16);
+  width: rem(16);
+}
+
+.footer__nav-item-text {
+  color: var(--white);
+  font-family: var(--base-font-family);
+  font-size: rem(16);
+  font-weight: var(--bold);
+  line-height: 1.5;
+  @include mq {
+    font-size: rem(14);
+  }
+}
+
+.footer__copyright {
+  color: var(--white);
+  font-family: var(--en-font);
+  font-size: rem(16);
+  font-weight: var(--regular);
+  line-height: 1;
+  padding-bottom: rem(40);
+  text-align: center;
+  @include mq {
+    font-size: rem(14);
+    padding-bottom: rem(30);
+  }
+}
+
+.footer__pagetop {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  position: absolute;
+  right: rem(100);
+  top: rem(831);
+  @include mq {
+    position: static;
+    margin: rem(20) auto 0;
+  }
+}
+
+.footer__pagetop-circle {
+  height: rem(84);
+  width: rem(84);
+  @include mq {
+    height: rem(60);
+    width: rem(60);
+  }
+}
+
+.footer__pagetop-text {
+  color: var(--brown);
+  font-family: var(--en-font);
+  font-size: rem(16);
+  font-weight: var(--regular);
+  letter-spacing: rem(0.16);
+  line-height: 1;
+}

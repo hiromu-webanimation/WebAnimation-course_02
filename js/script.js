@@ -44,8 +44,25 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   });
 
+  // スライダー
+  // rem計算用関数（16px基準）
+  function rem(value) {
+    return value * 16;
+  }
 
-
-  
+  const sliderSwiper = new Swiper('.slider__list', {
+    slidesPerView: 1,
+    spaceBetween: rem(15),
+    navigation: {
+      nextEl: '.slider__nav-next',
+      prevEl: '.slider__nav-prev',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: rem(20),
+      },
+    }
+  });
 
 });

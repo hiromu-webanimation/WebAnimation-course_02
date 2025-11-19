@@ -108,6 +108,8 @@ const watchFiles = () => {
 
 // 画像だけ削除
 const del = require('del');
+const fs = require('fs');
+const path = require('path');
 const delPath = {
     // css: '../dist/css/',
     // js: '../dist/js/script.js',
@@ -132,10 +134,98 @@ const clean = (done) => {
     done();
 };
 
+// src/imagesに存在しないファイルをimages/から削除
+const cleanOrphanImages = (done) => {
+    const srcImgDir = path.resolve('src/images');
+    const destImgDir = path.resolve('images');
+    
+    if (!fs.existsSync(destImgDir)) {
+        done();
+        return;
+    }
+    
+    // src/images内のファイルリストを取得（ファイル名のみ、ディレクトリ構造は無視）
+    const srcFileNames = new Set();
+    const getAllSrcFiles = (dir) => {
+        const files = fs.readdirSync(dir);
+        files.forEach(file => {
+            const filePath = path.join(dir, file);
+            const stat = fs.statSync(filePath);
+            if (stat.isDirectory()) {
+                getAllSrcFiles(filePath);
+            } else {
+                // ファイル名のみを追加
+                srcFileNames.add(file);
+                // webp変換後のファイル名も追加
+                // gulpWebpの処理: basename += extname → .webp
+                // 実際の出力: header_01.png → header_01.png.webp
+                const ext = path.extname(file);
+                if (ext && ext !== '.webp') {
+                    // 元のファイル名.webp の形式でwebpファイルが生成される
+                    srcFileNames.add(file + '.webp');
+                }
+            }
+        });
+    };
+    
+    if (fs.existsSync(srcImgDir)) {
+        getAllSrcFiles(srcImgDir);
+    }
+    
+    // images/内のファイルをチェック
+    const getAllDestFiles = (dir) => {
+        if (!fs.existsSync(dir)) {
+            return;
+        }
+        const files = fs.readdirSync(dir);
+        files.forEach(file => {
+            const filePath = path.join(dir, file);
+            const stat = fs.statSync(filePath);
+            if (stat.isDirectory()) {
+                getAllDestFiles(filePath);
+            } else {
+                // '> 'で始まるファイルは削除
+                if (file.startsWith('> ')) {
+                    fs.unlinkSync(filePath);
+                    console.log(`Deleted file with '> ' prefix: ${file}`);
+                    return;
+                }
+                
+                // .svg.svg のような不正な拡張子のファイルを削除
+                if (file.endsWith('.svg.svg')) {
+                    fs.unlinkSync(filePath);
+                    console.log(`Deleted file with .svg.svg extension: ${file}`);
+                    return;
+                }
+                
+                // ファイル名を取得（ディレクトリ構造は無視）
+                const fileName = path.basename(filePath);
+                // src/imagesに存在しないファイルを削除
+                if (!srcFileNames.has(fileName)) {
+                    fs.unlinkSync(filePath);
+                    console.log(`Deleted orphan file: ${fileName}`);
+                }
+            }
+        });
+    };
+    
+    getAllDestFiles(destImgDir);
+    done();
+};
+
+
+// 画像タスクをexport
+exports.imgImagemin = imgImagemin;
+exports.gulpWebp = gulpWebp;
 
 // npx gulpで出力する内容
-exports.default = series(series(clean, cssSass, imgImagemin, gulpWebp), parallel(watchFiles, browserSyncFunc));
+exports.default = series(series(clean, cssSass, imgImagemin, gulpWebp, cleanOrphanImages), parallel(watchFiles, browserSyncFunc));
 
+// クリーンアップタスク（export）
+exports.clean = clean;
+
+// 孤立した画像ファイルを削除
+exports.cleanOrphan = cleanOrphanImages;
 
 // npx gulp del → 画像最適化（重複を削除）
 // exports.del = series(series(clean, cssSass, imgImagemin), parallel(watchFiles, browserSyncFunc));
