@@ -27,7 +27,7 @@
   font-family: var(--base-font-family);
   font-size: rem(50);
   font-weight: var(--bold);
-  letter-spacing: rem(0.5);
+  letter-spacing: 0.01em;
   line-height: 1;
   @include mq {
     font-size: rem(32);

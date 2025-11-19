@@ -309,8 +309,7 @@ html {
   font-weight: 700;
   gap: 10px;
   gap: 0.625rem;
-  letter-spacing: 0.4px;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.01em;
   line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
@@ -345,8 +344,7 @@ html {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 700;
-  letter-spacing: 0.18px;
-  letter-spacing: 0.01125rem;
+  letter-spacing: 0.01em;
   line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
@@ -533,8 +531,7 @@ html {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 0.16px;
-  letter-spacing: 0.01rem;
+  letter-spacing: 0.01em;
   line-height: 1;
 }
 
@@ -639,15 +636,14 @@ html {
   font-size: 48px;
   font-size: 3rem;
   font-weight: 400;
-  letter-spacing: 4.8px;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1em;
   line-height: 1.2;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
   .fv__text-main {
     font-size: 2rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -657,15 +653,14 @@ html {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 400;
-  letter-spacing: 1.8px;
-  letter-spacing: 0.1125rem;
+  letter-spacing: 0.1em;
   line-height: 1.2;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
   .fv__text-sub {
     font-size: 0.875rem;
-    letter-spacing: 0.0875rem;
+    letter-spacing: 0.1em;
   }
 }
 
@@ -1336,8 +1331,7 @@ html {
   font-size: 48px;
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 0.48px;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.01em;
   line-height: 1.6;
   margin-bottom: 50px;
   margin-bottom: 3.125rem;
@@ -1358,8 +1352,7 @@ html {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: 0.2px;
-  letter-spacing: 0.0125rem;
+  letter-spacing: 0.01em;
   line-height: 1.8;
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
@@ -1470,8 +1463,7 @@ html {
   font-size: 50px;
   font-size: 3.125rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  letter-spacing: 0.03125rem;
+  letter-spacing: 0.01em;
   line-height: 1;
 }
 @media screen and (max-width: 767px) {
@@ -1668,8 +1660,7 @@ html {
   font-size: 48px;
   font-size: 3rem;
   font-weight: 700;
-  letter-spacing: 0.48px;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.01em;
   line-height: 1.2;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
@@ -1686,8 +1677,7 @@ html {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 700;
-  letter-spacing: 0.18px;
-  letter-spacing: 0.01125rem;
+  letter-spacing: 0.01em;
   line-height: normal;
 }
 
@@ -1796,8 +1786,7 @@ html {
   font-size: 9.75rem;
   font-weight: 400;
   left: 50%;
-  letter-spacing: 18.72px;
-  letter-spacing: 1.17rem;
+  letter-spacing: 0.12em;
   line-height: 1;
   position: absolute;
   text-align: center;
@@ -1932,8 +1921,7 @@ html {
   font-size: 50px;
   font-size: 3.125rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  letter-spacing: 0.03125rem;
+  letter-spacing: 0.01em;
   line-height: 1;
   margin-bottom: 60px;
   margin-bottom: 3.75rem;
@@ -2008,8 +1996,7 @@ html {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 700;
-  letter-spacing: 0.18px;
-  letter-spacing: 0.01125rem;
+  letter-spacing: 0.01em;
   line-height: 1;
   text-align: center;
 }
@@ -2036,8 +2023,7 @@ html {
   font-size: 50px;
   font-size: 3.125rem;
   font-weight: 700;
-  letter-spacing: 4px;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.08em;
   line-height: 1;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
@@ -2630,8 +2616,7 @@ html {
   font-size: 50px;
   font-size: 3.125rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
-  letter-spacing: 0.03125rem;
+  letter-spacing: 0.01em;
   line-height: 1;
   margin-bottom: 60px;
   margin-bottom: 3.75rem;
@@ -2726,8 +2711,7 @@ html {
   font-size: 32px;
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 0.32px;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.01em;
   line-height: 1.2;
   text-align: center;
 }

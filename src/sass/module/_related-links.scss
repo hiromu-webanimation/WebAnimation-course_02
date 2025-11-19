@@ -14,7 +14,7 @@
   font-family: var(--base-font-family);
   font-size: rem(50);
   font-weight: var(--bold);
-  letter-spacing: rem(0.5);
+  letter-spacing: 0.01em;
   line-height: 1;
   margin-bottom: rem(60);
   text-align: center;
@@ -64,7 +64,7 @@
   font-family: var(--base-font-family);
   font-size: rem(18);
   font-weight: var(--bold);
-  letter-spacing: rem(0.18);
+  letter-spacing: 0.01em;
   line-height: 1;
   text-align: center;
   @include mq {

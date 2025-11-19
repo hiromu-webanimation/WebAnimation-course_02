@@ -71,12 +71,12 @@
   font-family: var(--en-font);
   font-size: rem(48);
   font-weight: var(--regular);
-  letter-spacing: rem(4.8);
+  letter-spacing: 0.1em;
   line-height: 1.2;
   text-align: center;
   @include mq {
     font-size: rem(32);
-    letter-spacing: rem(3.2);
+    letter-spacing: 0.1em;
   }
 }
 
@@ -85,12 +85,12 @@
   font-family: var(--en-font);
   font-size: rem(18);
   font-weight: var(--regular);
-  letter-spacing: rem(1.8);
+  letter-spacing: 0.1em;
   line-height: 1.2;
   text-align: center;
   @include mq {
     font-size: rem(14);
-    letter-spacing: rem(1.4);
+    letter-spacing: 0.1em;
   }
 }
 
