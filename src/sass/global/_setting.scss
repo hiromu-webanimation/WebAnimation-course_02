@@ -1,0 +1,74 @@
+@use 'sass:math';
+
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1100px;
+// ※キャンパス幅ではなくインナーの幅を指す
+
+// CSS変数の定義
+:root {
+  // ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
+
+  --base-font-family: '';
+  --second-font-family: '';
+
+  // 余白
+  --padding-pc: 25px;
+  --padding-sp: 20px;
+  // ※検証ツールでしっかり反映されているか確認する
+
+  // フォントウェイト
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+
+  //色指定
+  --black: #000;
+  --white: #fff;
+}
+
+body {
+  font-family: var(--base-font-family);
+}
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (
+  md: 767,
+);
+
+//メディアクエリー
+$mediaquerys: (
+  md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+////////////////////
+// 非表示設定
+////////////////////
+
+//spのみ表示
+@media only screen and (min-width: 768px) {
+  .sp {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+}

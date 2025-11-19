@@ -1,0 +1,11 @@
+@use 'global' as *;
+
+.inner {
+  max-width: rem(1450);
+  padding: 0 var(--padding-pc);
+  margin-inline: auto;
+  @include mq {
+    max-width: rem(600);
+    padding: 0 var(--padding-sp);
+  }
+}
