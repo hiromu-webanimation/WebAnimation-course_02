@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .news {
-  padding: rem(80) 0;
+  padding: rem(100) 0;
 }
 
 .news__inner {
@@ -15,7 +15,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: rem(30);
+  margin-bottom: rem(40);
   @include mq {
     flex-direction: column;
     align-items: flex-start;
@@ -59,7 +59,7 @@
 .news__list {
   display: flex;
   flex-direction: column;
-  gap: rem(30);
+  gap: rem(25);
 }
 
 .news__item {
@@ -73,7 +73,7 @@
   align-items: center;
   display: grid;
   gap: rem(20);
-  grid-template-columns: rem(100) rem(100) 1fr;
+  grid-template-columns: rem(100) rem(88) 1fr;
   padding-bottom: rem(30);
   position: relative;
   @include mq {
@@ -110,8 +110,8 @@
   display: flex;
   height: rem(28);
   justify-content: center;
-  width: fit-content;
-  padding: 0 rem(12);
+  width: rem(88);
+  padding: 0 rem(8) rem(0) rem(16);
   @include mq {
     width: fit-content;
     padding: 0 rem(10);
@@ -145,7 +145,7 @@
   font-family: var(--base-font-family);
   font-size: rem(16);
   font-weight: var(--bold);
-  line-height: 1.5;
+  line-height: 1.6;
   @include mq {
     font-size: rem(14);
   }

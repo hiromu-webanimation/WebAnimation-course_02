@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .slider {
-  padding: rem(100) 0;
+  padding: rem(120) 0;
 }
 
 .slider__inner {
@@ -15,7 +15,7 @@
   align-items: flex-start;
   display: flex;
   gap: rem(40);
-  margin-bottom: rem(60);
+  margin-bottom: rem(50);
   position: relative;
   @include mq {
     flex-direction: column;
@@ -116,7 +116,7 @@
   font-family: var(--base-font-family);
   font-size: rem(28);
   font-weight: var(--bold);
-  line-height: normal;
+  line-height: 1.4;
   margin-bottom: rem(20);
   @include mq {
     font-size: rem(24);
@@ -128,7 +128,7 @@
   font-family: var(--base-font-family);
   font-size: rem(18);
   font-weight: var(--regular);
-  line-height: 1.9;
+  line-height: 2;
   margin-bottom: rem(20);
   @include mq {
     font-size: rem(16);

@@ -1278,8 +1278,8 @@ html {
 }
 
 .map {
-  padding: 80px 0;
-  padding: 5rem 0;
+  padding: 100px 0;
+  padding: 6.25rem 0;
   position: relative;
 }
 
@@ -1336,13 +1336,11 @@ html {
   font-size: 48px;
   font-size: 3rem;
   font-weight: 700;
-  height: 202px;
-  height: 12.625rem;
   letter-spacing: 0.48px;
   letter-spacing: 0.03rem;
-  line-height: 1.5;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
   width: 578px;
   width: 36.125rem;
 }
@@ -1360,13 +1358,11 @@ html {
   font-size: 20px;
   font-size: 1.25rem;
   font-weight: 400;
-  height: 502px;
-  height: 31.375rem;
   letter-spacing: 0.2px;
   letter-spacing: 0.0125rem;
-  line-height: 1.7;
-  margin-bottom: 47px;
-  margin-bottom: 2.9375rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   width: 578px;
   width: 36.125rem;
 }
@@ -1431,8 +1427,8 @@ html {
 }
 
 .news {
-  padding: 80px 0;
-  padding: 5rem 0;
+  padding: 100px 0;
+  padding: 6.25rem 0;
 }
 
 .news__inner {
@@ -1453,8 +1449,8 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 30px;
-  margin-bottom: 1.875rem;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 @media screen and (max-width: 767px) {
   .news__header {
@@ -1526,8 +1522,8 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 30px;
-  gap: 1.875rem;
+  gap: 25px;
+  gap: 1.5625rem;
 }
 
 .news__item {
@@ -1546,7 +1542,7 @@ html {
   display: grid;
   gap: 20px;
   gap: 1.25rem;
-  grid-template-columns: 6.25rem 6.25rem 1fr;
+  grid-template-columns: 6.25rem 5.5rem 1fr;
   padding-bottom: 30px;
   padding-bottom: 1.875rem;
   position: relative;
@@ -1598,11 +1594,10 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0 12px;
-  padding: 0 0.75rem;
+  width: 88px;
+  width: 5.5rem;
+  padding: 0 8px 0px 16px;
+  padding: 0 0.5rem 0rem 1rem;
 }
 @media screen and (max-width: 767px) {
   .news__item-tag {
@@ -1642,7 +1637,7 @@ html {
   font-size: 16px;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 @media screen and (max-width: 767px) {
   .news__item-title {
@@ -1651,8 +1646,8 @@ html {
 }
 
 .photo-town {
-  padding: 100px 0;
-  padding: 6.25rem 0;
+  padding: 120px 0;
+  padding: 7.5rem 0;
 }
 
 .photo-town__inner {
@@ -1675,7 +1670,7 @@ html {
   font-weight: 700;
   letter-spacing: 0.48px;
   letter-spacing: 0.03rem;
-  line-height: normal;
+  line-height: 1.2;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
 }
@@ -1717,7 +1712,7 @@ html {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 @media screen and (max-width: 767px) {
   .photo-town__text {
@@ -1781,8 +1776,8 @@ html {
 }
 
 .pickup {
-  padding: 150px 0 100px;
-  padding: 9.375rem 0 6.25rem;
+  padding: 200px 0 100px;
+  padding: 12.5rem 0 6.25rem;
   position: relative;
 }
 
@@ -1806,8 +1801,8 @@ html {
   line-height: 1;
   position: absolute;
   text-align: center;
-  top: -80px;
-  top: -5rem;
+  top: -100px;
+  top: -6.25rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 1;
@@ -1815,7 +1810,7 @@ html {
 @media screen and (max-width: 767px) {
   .pickup__title {
     font-size: 5rem;
-    top: -2.5rem;
+    top: -3.125rem;
   }
 }
 
@@ -1824,13 +1819,13 @@ html {
   gap: 40px;
   gap: 2.5rem;
   grid-template-columns: 1fr 1fr;
-  margin-top: 120px;
-  margin-top: 7.5rem;
+  margin-top: 150px;
+  margin-top: 9.375rem;
 }
 @media screen and (max-width: 767px) {
   .pickup__list {
     grid-template-columns: 1fr;
-    margin-top: 3.75rem;
+    margin-top: 5rem;
     gap: 1.875rem;
   }
 }
@@ -1867,7 +1862,7 @@ html {
   font-size: 32px;
   font-size: 2rem;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.4;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
 }
@@ -1883,7 +1878,7 @@ html {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 2;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
 }
@@ -1921,8 +1916,8 @@ html {
 }
 
 .related-links {
-  padding: 100px 0;
-  padding: 6.25rem 0;
+  padding: 120px 0;
+  padding: 7.5rem 0;
 }
 
 .related-links__inner {
@@ -2025,8 +2020,8 @@ html {
 }
 
 .search {
-  padding: 120px 0;
-  padding: 7.5rem 0;
+  padding: 100px 0;
+  padding: 6.25rem 0;
 }
 
 .search__inner {
@@ -2038,11 +2033,11 @@ html {
 
 .search__title {
   font-family: 'Europa', sans-serif;
-  font-size: 47px;
-  font-size: 2.9375rem;
+  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 700;
-  letter-spacing: 3.76px;
-  letter-spacing: 0.235rem;
+  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
   line-height: 1;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
@@ -2051,12 +2046,12 @@ html {
 
 .search__subtitle {
   font-family: 'Zen Kaku Gothic New', sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: 1;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
   text-align: center;
 }
 
@@ -2384,8 +2379,8 @@ html {
 }
 
 .slider {
-  padding: 100px 0;
-  padding: 6.25rem 0;
+  padding: 120px 0;
+  padding: 7.5rem 0;
 }
 
 .slider__inner {
@@ -2405,8 +2400,8 @@ html {
   display: flex;
   gap: 40px;
   gap: 2.5rem;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem;
+  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
   position: relative;
 }
 @media screen and (max-width: 767px) {
@@ -2565,7 +2560,7 @@ html {
   font-size: 28px;
   font-size: 1.75rem;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.4;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
 }
@@ -2581,7 +2576,7 @@ html {
   font-size: 18px;
   font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 2;
   margin-bottom: 20px;
   margin-bottom: 1.25rem;
 }
@@ -2619,8 +2614,8 @@ html {
 }
 
 .useful-info {
-  padding: 100px 0;
-  padding: 6.25rem 0;
+  padding: 120px 0;
+  padding: 7.5rem 0;
 }
 
 .useful-info__inner {
@@ -2733,7 +2728,7 @@ html {
   font-weight: 700;
   letter-spacing: 0.32px;
   letter-spacing: 0.02rem;
-  line-height: 1;
+  line-height: 1.2;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -2743,8 +2738,8 @@ html {
 }
 
 .youtube {
-  padding: 100px 0;
-  padding: 6.25rem 0;
+  padding: 120px 0;
+  padding: 7.5rem 0;
   position: relative;
 }
 

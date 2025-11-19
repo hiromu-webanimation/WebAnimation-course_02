@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .pickup {
-  padding: rem(150) 0 rem(100);
+  padding: rem(200) 0 rem(100);
   position: relative;
 }
 
@@ -22,12 +22,12 @@
   line-height: 1;
   position: absolute;
   text-align: center;
-  top: rem(-80);
+  top: rem(-100);
   transform: translateX(-50%);
   z-index: 1;
   @include mq {
     font-size: rem(80);
-    top: rem(-40);
+    top: rem(-50);
   }
 }
 
@@ -35,10 +35,10 @@
   display: grid;
   gap: rem(40);
   grid-template-columns: 1fr 1fr;
-  margin-top: rem(120);
+  margin-top: rem(150);
   @include mq {
     grid-template-columns: 1fr;
-    margin-top: rem(60);
+    margin-top: rem(80);
     gap: rem(30);
   }
 }
@@ -67,7 +67,7 @@
   font-family: var(--base-font-family);
   font-size: rem(32);
   font-weight: var(--bold);
-  line-height: normal;
+  line-height: 1.4;
   margin-bottom: rem(20);
   @include mq {
     font-size: rem(24);
@@ -79,7 +79,7 @@
   font-family: var(--base-font-family);
   font-size: rem(18);
   font-weight: var(--regular);
-  line-height: 1.9;
+  line-height: 2;
   margin-bottom: rem(20);
   @include mq {
     font-size: rem(16);

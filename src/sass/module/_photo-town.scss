@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .photo-town {
-  padding: rem(100) 0;
+  padding: rem(120) 0;
 }
 
 .photo-town__inner {
@@ -20,7 +20,7 @@
   font-size: rem(48);
   font-weight: var(--bold);
   letter-spacing: rem(0.48);
-  line-height: normal;
+  line-height: 1.2;
   margin-bottom: rem(20);
   @include mq {
     font-size: rem(32);
@@ -52,7 +52,7 @@
   font-family: var(--base-font-family);
   font-size: rem(18);
   font-weight: var(--regular);
-  line-height: 1.7;
+  line-height: 1.8;
   @include mq {
     font-size: rem(16);
   }

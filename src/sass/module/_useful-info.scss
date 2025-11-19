@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .useful-info {
-  padding: rem(100) 0;
+  padding: rem(120) 0;
 }
 
 .useful-info__inner {
@@ -85,7 +85,7 @@
   font-size: rem(32);
   font-weight: var(--bold);
   letter-spacing: rem(0.32);
-  line-height: 1;
+  line-height: 1.2;
   text-align: center;
   @include mq {
     font-size: rem(20);

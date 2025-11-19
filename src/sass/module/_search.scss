@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .search {
-  padding: rem(120) 0;
+  padding: rem(100) 0;
 }
 
 .search__inner {
@@ -12,9 +12,9 @@
 
 .search__title {
   font-family: var(--en-font);
-  font-size: rem(47);
+  font-size: rem(50);
   font-weight: var(--bold);
-  letter-spacing: rem(3.76);
+  letter-spacing: rem(4);
   line-height: 1;
   margin-bottom: rem(20);
   text-align: center;
@@ -22,10 +22,10 @@
 
 .search__subtitle {
   font-family: var(--base-font-family);
-  font-size: rem(16);
+  font-size: rem(18);
   font-weight: var(--bold);
-  line-height: 1;
-  margin-bottom: rem(60);
+  line-height: 1.5;
+  margin-bottom: rem(50);
   text-align: center;
 }
 
