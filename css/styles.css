@@ -800,47 +800,60 @@ html {
 .header {
   position: relative;
   width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 20px;
+  top: 1.25rem;
+  right: 24px;
+  right: 1.5rem;
+  left: 24px;
+  left: 1.5rem;
+  width: calc(100% - 3rem);
 }
 
 .header__accessibility {
   background-color: #fff;
-  border-radius: 0.625rem 0.625rem 0 0;
-  height: 70px;
-  height: 4.375rem;
   position: relative;
+  padding: 5px 32px;
+  padding: 0.3125rem 2rem;
   width: 100%;
 }
 
 .header__accessibility-inner {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px;
+  gap: 3.125rem;
+}
+
+.header__logo {
+  display: block;
+  width: 113px;
+  width: 7.0625rem;
+  aspect-ratio: 113/60;
+}
+
+.header__logo img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header__top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 40px;
   gap: 2.5rem;
-  height: 30px;
-  height: 1.875rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  max-width: 1392px;
-  max-width: 87rem;
-  padding: 20px 25px;
-  padding: 1.25rem 25px;
-  position: relative;
-}
-@media screen and (max-width: 767px) {
-  .header__accessibility-inner {
-    gap: 1.25rem;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .header__font-size {
@@ -850,8 +863,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
-  gap: 0.625rem;
+  gap: 8px;
+  gap: 0.5rem;
 }
 
 .header__font-size-label {
@@ -860,7 +873,8 @@ html {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: 700;
-  white-space: nowrap;
+  margin-right: 2px;
+  margin-right: 0.125rem;
 }
 
 .header__font-size-enlarge {
@@ -1133,39 +1147,22 @@ html {
 .header__nav {
   background-color: #736357;
   border-radius: 0 0 0.625rem 0.625rem;
-  height: 50px;
-  height: 3.125rem;
-  position: relative;
-  width: 100%;
+  padding: 5px 30px;
+  padding: 0.3125rem 1.875rem;
 }
 
 .header__nav-inner {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 10px;
-  gap: 0.625rem;
-  height: 30px;
-  height: 1.875rem;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 10px auto 0;
-  margin: 0.625rem auto 0;
-  max-width: 1392px;
-  max-width: 87rem;
-  padding: 0 25px;
-  position: relative;
-}
-@media screen and (max-width: 767px) {
-  .header__nav-inner {
-    gap: 0.5rem;
-  }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  gap: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header__nav-item {
@@ -1175,14 +1172,10 @@ html {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
-  white-space: nowrap;
+  padding: 8px 0;
+  padding: 0.5rem 0;
+  position: relative;
 }
-@media screen and (max-width: 767px) {
-  .header__nav-item {
-    font-size: 0.875rem;
-  }
-}
-
 .header__nav-item-icon {
   height: 16px;
   height: 1rem;
@@ -1229,27 +1222,6 @@ html {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: 700;
-}
-
-.header__logo {
-  height: 60px;
-  height: 3.75rem;
-  left: 32px;
-  left: 2rem;
-  position: absolute;
-  top: 5px;
-  top: 0.3125rem;
-  width: 113px;
-  width: 7.0625rem;
-  z-index: 10;
-}
-@media screen and (max-width: 767px) {
-  .header__logo {
-    height: 2.5rem;
-    left: 1.25rem;
-    top: 0.625rem;
-    width: 4.6875rem;
-  }
 }
 
 .header__logo-img {
