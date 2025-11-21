@@ -1,130 +1,52 @@
 @use 'global' as *;
 
 .fv {
-  height: rem(1080);
-  overflow: hidden;
+  height: 100vh;
+  min-height: rem(800);
   position: relative;
-  width: 100%;
-  @include mq {
-    height: rem(600);
-  }
 }
 
-.fv__bg {
+.fv__bg-contaienr.swiper {
   height: 100%;
-  left: 0;
   position: absolute;
-  top: 0;
-  width: 100%;
+  inset: 0;
 }
 
 .fv__bg-img {
-  height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
 .fv__inner {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  justify-content: center;
-  position: relative;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 rem(85);
   z-index: 2;
 }
 
 .fv__logo {
-  height: rem(387);
-  margin-bottom: rem(40);
-  position: relative;
+  aspect-ratio: 731/387;
   width: rem(731);
-  z-index: 2;
-  @include mq {
-    height: rem(200);
-    margin-bottom: rem(30);
-    width: rem(380);
-  }
 }
 
 .fv__logo-img {
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.fv__text {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: rem(20);
-  position: relative;
-  z-index: 2;
-  @include mq {
-    gap: rem(15);
-  }
-}
-
-.fv__text-main {
-  color: var(--white);
-  font-family: var(--en-font);
-  font-size: rem(48);
-  font-weight: var(--regular);
-  letter-spacing: 0.1em;
-  line-height: 1.2;
-  text-align: center;
-  @include mq {
-    font-size: rem(32);
-    letter-spacing: 0.1em;
-  }
-}
-
-.fv__text-sub {
-  color: var(--white);
-  font-family: var(--en-font);
-  font-size: rem(18);
-  font-weight: var(--regular);
-  letter-spacing: 0.1em;
-  line-height: 1.2;
-  text-align: center;
-  @include mq {
-    font-size: rem(14);
-    letter-spacing: 0.1em;
-  }
+  object-fit: contain;
 }
 
 .fv__slider-button {
   align-items: center;
   display: flex;
-  height: rem(60);
-  justify-content: center;
-  position: absolute;
-  right: rem(120);
-  top: 50%;
-  transform: translateY(-50%);
-  width: rem(191);
-  z-index: 3;
-  @include mq {
-    right: rem(20);
-    width: rem(150);
-  }
+  flex-direction: column;
+  gap: rem(12);
 }
 
-.fv__slider-button-inner {
-  align-items: center;
+.fv__slider-bullets {
   display: flex;
-  height: rem(60);
-  position: relative;
-  width: rem(191);
-}
-
-.fv__slider-button-line {
-  height: rem(11);
-  left: rem(10);
-  position: absolute;
-  top: rem(24.5);
-  width: rem(135);
+  align-items: center;
+  flex-direction: column;
+  gap: rem(20);
 }
 
 .fv__slider-button-icon {
