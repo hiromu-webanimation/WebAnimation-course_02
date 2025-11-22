@@ -1,16 +1,20 @@
 @use 'global' as *;
 
 .youtube {
-  padding: rem(120) 0;
+  margin-bottom: rem(148);
   position: relative;
+  max-width: rem(968);
+  padding: 0 var(--padding-pc);
+  margin-inline: auto;
+  display: grid;
+  place-content: center;
 }
 
 .youtube__bg {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 100%;
+  aspect-ratio: 918/427;
+  border-radius: rem(32);
+  overflow: hidden;
 }
 
 .youtube__bg-img {
@@ -19,26 +23,11 @@
   width: 100%;
 }
 
-.youtube__inner {
-  align-items: center;
-  display: flex;
-  height: rem(427);
-  justify-content: center;
-  margin: 0 auto;
-  max-width: rem(918);
-  padding: 0 var(--padding-pc);
-  position: relative;
-  z-index: 2;
-  @include mq {
-    height: rem(300);
-  }
-}
-
-.youtube__icon {
-  height: rem(128);
+.youtube__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: rem(128);
-  @include mq {
-    height: rem(80);
-    width: rem(80);
-  }
+  aspect-ratio: 1;
 }

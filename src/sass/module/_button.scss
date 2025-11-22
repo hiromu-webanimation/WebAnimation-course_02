@@ -1,0 +1,25 @@
+@use 'global' as *;
+
+.button {
+  align-items: center;
+  display: flex;
+  font-family: var(--base-font-family);
+  font-size: rem(14);
+  font-weight: var(--bold);
+  color: var(--base-color);
+  gap: rem(10);
+  line-height: normal;
+  width: fit-content;
+  padding: rem(13) 0;
+  border-bottom: 1px solid var(--base-color);
+}
+
+.button__icon {
+  aspect-ratio: 28/13;
+  width: rem(13);
+  background-color: var(--base-color);
+  mask-image: url('../images/arrow.svg');
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}

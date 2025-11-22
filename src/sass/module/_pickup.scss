@@ -1,15 +1,13 @@
 @use 'global' as *;
 
 .pickup {
-  padding: rem(200) 0 rem(100);
-  position: relative;
+  margin-bottom: rem(384);
 }
 
 .pickup__inner {
-  max-width: rem(1264);
-  margin: 0 auto;
+  max-width: rem(1314);
+  margin-inline: auto;
   padding: 0 var(--padding-pc);
-  position: relative;
 }
 
 .pickup__title {
@@ -17,50 +15,49 @@
   font-family: var(--en-font);
   font-size: rem(156);
   font-weight: var(--regular);
-  left: 50%;
   letter-spacing: 0.12em;
   line-height: 1;
-  position: absolute;
-  text-align: center;
-  top: rem(-100);
-  transform: translateX(-50%);
-  z-index: 1;
-  @include mq {
-    font-size: rem(80);
-    top: rem(-50);
-  }
+  margin-bottom: rem(60);
+  padding-left: rem(44);
 }
 
 .pickup__list {
   display: grid;
-  gap: rem(40);
-  grid-template-columns: 1fr 1fr;
-  margin-top: rem(150);
-  @include mq {
-    grid-template-columns: 1fr;
-    margin-top: rem(80);
-    gap: rem(30);
-  }
+  grid-template-columns: rem(491) 1fr;
+  grid-template-rows: rem(305) rem(305);
+  gap: rem(26) rem(31);
 }
 
 .pickup__item {
   position: relative;
+  --item-color: var(--base-color);
+}
+
+.pickup__item:nth-child(1) {
+  grid-row: 1 / 3;
+  height: rem(642);
+  --item-color: var(--white);
+  .pickup__item-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 rem(56) rem(32);
+  }
+}
+
+.pickup__item:nth-child(2),
+.pickup__item:nth-child(3) {
+  display: grid;
+  grid-template-columns: rem(305) 1fr;
+  gap: rem(23);
 }
 
 .pickup__item-img {
-  height: rem(600);
-  object-fit: cover;
-  width: 100%;
-  @include mq {
-    height: rem(300);
-  }
+  border-radius: rem(34);
 }
 
 .pickup__item-content {
-  margin-top: rem(30);
-  @include mq {
-    margin-top: rem(20);
-  }
+  align-self: center;
 }
 
 .pickup__item-title {
@@ -68,11 +65,8 @@
   font-size: rem(32);
   font-weight: var(--bold);
   line-height: 1.4;
-  margin-bottom: rem(20);
-  @include mq {
-    font-size: rem(24);
-    margin-bottom: rem(15);
-  }
+  color: var(--item-color);
+  margin-bottom: rem(16);
 }
 
 .pickup__item-text {
@@ -80,25 +74,14 @@
   font-size: rem(18);
   font-weight: var(--regular);
   line-height: 2;
-  margin-bottom: rem(20);
-  @include mq {
-    font-size: rem(16);
-    margin-bottom: rem(15);
-  }
+  margin-bottom: rem(16);
+  color: var(--item-color);
 }
 
 .pickup__item-link {
-  align-items: center;
-  display: flex;
-  font-family: var(--base-font-family);
-  font-size: rem(14);
-  font-weight: var(--bold);
-  gap: rem(10);
-  line-height: normal;
-  width: fit-content;
-}
-
-.pickup__item-link-icon {
-  height: rem(34);
-  width: rem(34);
+  color: var(--item-color);
+  border-bottom: 1px solid var(--item-color);
+  span {
+    background-color: var(--item-color);
+  }
 }

@@ -1,19 +1,18 @@
 @use 'global' as *;
 
 .news {
-  padding: rem(100) 0;
+  margin-bottom: rem(145);
 }
 
 .news__inner {
-  max-width: rem(1067);
+  max-width: rem(1117);
   margin: 0 auto;
   padding: 0 var(--padding-pc);
-  position: relative;
 }
 
 .news__header {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: rem(40);
   @include mq {
@@ -35,61 +34,42 @@
 }
 
 .news__link {
-  align-items: center;
   display: flex;
+  align-items: center;
   font-family: var(--base-font-family);
   font-size: rem(16);
   font-weight: var(--bold);
+  padding: rem(10) 0;
   gap: rem(10);
-  line-height: 1;
-  @include mq {
-    font-size: rem(14);
-  }
-}
-
-.news__link-icon {
-  height: rem(80);
-  width: rem(80);
-  @include mq {
-    height: rem(60);
-    width: rem(60);
+  .arrow {
+    background-color: var(--black);
+    aspect-ratio: 28/13;
+    width: rem(28);
+    display: block;
+    mask-image: url('../images/arrow.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
   }
 }
 
 .news__list {
-  display: flex;
-  flex-direction: column;
-  gap: rem(25);
+  display: grid;
+  gap: rem(70);
+  grid-template-columns: 1fr;
 }
 
 .news__item {
-  position: relative;
-  @include mq {
-    gap: rem(15);
-  }
 }
 
 .news__item-link {
   align-items: center;
   display: grid;
-  gap: rem(20);
-  grid-template-columns: rem(100) rem(88) 1fr;
-  padding-bottom: rem(30);
+  gap: rem(16);
+  grid-template-columns: rem(52) rem(90) 1fr;
   position: relative;
-  @include mq {
-    grid-template-columns: 1fr;
-    gap: rem(15);
-  }
-}
-
-.news__item-link::after {
-  background-color: var(--gray);
-  bottom: 0;
-  content: '';
-  height: rem(1);
-  left: 0;
-  position: absolute;
-  width: 100%;
+  padding: rem(8) 0;
+  border-bottom: 1px solid var(--base-color);
 }
 
 .news__item-date {
@@ -97,25 +77,18 @@
   font-size: rem(16);
   font-weight: var(--bold);
   line-height: 1;
-  white-space: nowrap;
-  @include mq {
-    font-size: rem(14);
-  }
 }
 
 .news__item-tag {
-  align-items: center;
-  border: rem(1) solid;
+  text-align: center;
+  border: 1px solid;
   border-radius: rem(4);
-  display: flex;
-  height: rem(28);
-  justify-content: center;
-  width: rem(88);
-  padding: 0 rem(8) rem(0) rem(16);
-  @include mq {
-    width: fit-content;
-    padding: 0 rem(10);
-  }
+  padding: rem(7) rem(16);
+  color: var(--brown);
+  font-family: var(--base-font-family);
+  font-size: rem(14);
+  font-weight: var(--bold);
+  line-height: 1;
 }
 
 .news__item-tag--notice {
@@ -131,14 +104,6 @@
 .news__item-tag--event {
   background-color: var(--white);
   border-color: var(--pink);
-}
-
-.news__item-tag-text {
-  color: var(--brown);
-  font-family: var(--base-font-family);
-  font-size: rem(14);
-  font-weight: var(--bold);
-  line-height: 1;
 }
 
 .news__item-title {

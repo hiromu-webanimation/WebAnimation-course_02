@@ -4,6 +4,7 @@
   height: 100vh;
   min-height: rem(800);
   position: relative;
+  margin-bottom: rem(120);
 }
 
 .fv__bg-contaienr.swiper {
@@ -19,11 +20,13 @@
 
 .fv__inner {
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 rem(85);
-  z-index: 2;
+  z-index: 5;
+  position: relative;
 }
 
 .fv__logo {
@@ -46,18 +49,25 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: rem(20);
+  gap: rem(10);
+  position: static !important;
+}
+
+.fv__slider-bullets {
+  .swiper-pagination-bullet {
+    background-color: var(--white);
+    opacity: 1;
+    transition: 0.3s ease-in-out all;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--brown);
+  }
 }
 
 .fv__slider-button-icon {
-  align-items: center;
-  display: flex;
-  height: rem(24);
-  justify-content: center;
-  left: rem(157);
-  position: absolute;
-  top: rem(18);
   width: rem(24);
+  aspect-ratio: 24/24;
 }
 
 .fv__slider-button-icon-img {
@@ -70,9 +80,6 @@
   display: flex;
   flex-direction: column;
   gap: rem(24);
-  left: rem(69);
-  position: absolute;
-  top: rem(483);
   z-index: 3;
   @include mq {
     left: rem(20);

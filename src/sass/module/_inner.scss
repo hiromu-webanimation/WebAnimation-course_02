@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .inner {
-  max-width: rem(1450);
+  max-width: rem(1117);
   padding: 0 var(--padding-pc);
   margin-inline: auto;
   @include mq {
