@@ -182,8 +182,8 @@ html {
   font-size: 0.875rem;
   font-weight: 700;
   color: #1a1a1a;
-  gap: 10px;
-  gap: 0.625rem;
+  gap: 25px;
+  gap: 1.5625rem;
   line-height: normal;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -303,6 +303,8 @@ html {
 }
 
 .footer__info-tel-label {
+  margin-top: 5px;
+  margin-top: 0.3125rem;
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
@@ -630,8 +632,8 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 24px;
-  gap: 1.5rem;
+  gap: 40px;
+  gap: 2.5rem;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -1035,8 +1037,8 @@ html {
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1.6;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem;
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .map__text {
@@ -1045,14 +1047,14 @@ html {
   font-size: 1.25rem;
   font-weight: 400;
   letter-spacing: 0.01em;
-  line-height: 1.8;
-  margin-bottom: 70px;
-  margin-bottom: 4.375rem;
+  line-height: 1.7;
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
 }
 
 .news {
-  margin-bottom: 145px;
-  margin-bottom: 9.0625rem;
+  margin-bottom: 125px;
+  margin-bottom: 7.8125rem;
 }
 
 .news__inner {
@@ -1072,8 +1074,8 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 40px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 45px;
+  margin-bottom: 2.8125rem;
 }
 @media screen and (max-width: 767px) {
   .news__header {
@@ -1225,8 +1227,8 @@ html {
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1.2;
-  margin-bottom: 24px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 13px;
+  margin-bottom: 0.8125rem;
 }
 
 .photo-town__subtitle {
@@ -1297,8 +1299,8 @@ html {
   font-weight: 400;
   letter-spacing: 0.12em;
   line-height: 1;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem;
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
   padding-left: 44px;
   padding-left: 2.75rem;
 }
@@ -1354,6 +1356,7 @@ html {
   font-weight: 700;
   line-height: 1.4;
   color: var(--item-color);
+  width: calc(100% + 0.625rem);
   margin-bottom: 16px;
   margin-bottom: 1rem;
 }
@@ -1378,8 +1381,8 @@ html {
 }
 
 .related-links {
-  margin-bottom: 160px;
-  margin-bottom: 10rem;
+  margin-bottom: 180px;
+  margin-bottom: 11.25rem;
 }
 
 .related-links__inner {
@@ -1396,8 +1399,8 @@ html {
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1;
-  margin-bottom: 130px;
-  margin-bottom: 8.125rem;
+  margin-bottom: 180px;
+  margin-bottom: 11.25rem;
   text-align: center;
 }
 
@@ -1434,8 +1437,8 @@ html {
 }
 
 .search {
-  margin-bottom: 200px;
-  margin-bottom: 12.5rem;
+  margin-bottom: 220px;
+  margin-bottom: 13.75rem;
 }
 
 .search__inner {
@@ -1447,8 +1450,8 @@ html {
 
 .search__title {
   font-family: 'Europa', sans-serif;
-  font-size: 50px;
-  font-size: 3.125rem;
+  font-size: 47px;
+  font-size: 2.9375rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   line-height: 1;
@@ -1459,12 +1462,12 @@ html {
 
 .search__subtitle {
   font-family: 'Zen Kaku Gothic New', sans-serif;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
-  margin-bottom: 50px;
-  margin-bottom: 3.125rem;
+  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
   text-align: center;
 }
 
@@ -1477,9 +1480,12 @@ html {
   display: flex;
   height: 50px;
   height: 3.125rem;
-  margin-bottom: 60px;
-  margin-bottom: 3.75rem;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   position: relative;
+  max-width: 820px;
+  max-width: 51.25rem;
+  margin-inline: auto;
 }
 
 .search__form-input {
@@ -1533,8 +1539,8 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 10px;
-  gap: 0.625rem;
+  gap: 25px;
+  gap: 1.5625rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1578,6 +1584,15 @@ html {
   margin-bottom: 2.5rem;
   position: relative;
 }
+.search__menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  height: 1px;
+  background-color: #736357;
+}
 
 .search__menu-item {
   -webkit-box-align: center;
@@ -1587,42 +1602,28 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 60px;
-  height: 3.75rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
   width: 300px;
   width: 18.75rem;
+  padding: 20px 10px;
+  padding: 1.25rem 0.625rem;
   color: #fff;
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1;
+  z-index: 3;
 }
 
-.search__menu-item:not(:last-child)::after {
+.search__menu-item:last-child {
   background-color: #fff;
-  content: "";
-  height: 60px;
-  height: 3.75rem;
-  opacity: 0.3;
-  position: absolute;
-  right: -9px;
-  right: -0.5625rem;
-  top: 0;
-  width: 1px;
-  width: 0.0625rem;
-}
-
-.search__menu-line {
-  height: 1px;
-  height: 0.0625rem;
-  position: absolute;
-  width: 9px;
-  width: 0.5625rem;
+  color: #736357;
+  border: 1px solid;
+  border-color: #736357 #736357 transparent #736357;
 }
 
 .search__lifes {
@@ -1635,8 +1636,8 @@ html {
           flex-direction: column;
   gap: 20px;
   gap: 1.25rem;
-  margin-bottom: 40px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .search__lifes-row {
@@ -1645,6 +1646,9 @@ html {
   display: flex;
   gap: 20px;
   gap: 1.25rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .search__lifes-item {
@@ -1658,10 +1662,8 @@ html {
   display: flex;
   gap: 10px;
   gap: 0.625rem;
-  height: 60px;
-  height: 3.75rem;
-  padding: 0 20px;
-  padding: 0 1.25rem;
+  padding: 10px;
+  padding: 0.625rem;
   width: 176px;
   width: 11rem;
 }
@@ -1686,16 +1688,16 @@ html {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
-  border-radius: 0.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
   gap: 0.625rem;
-  min-height: 60px;
-  min-height: 3.75rem;
-  padding: 10px 20px;
-  padding: 0.625rem 1.25rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  padding: 0.625rem;
 }
 
 .search__population-icon {
@@ -1827,6 +1829,7 @@ html {
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 32px;
   font-size: 2rem;
+  letter-spacing: 0.5em;
   font-weight: 700;
   line-height: normal;
   -webkit-writing-mode: vertical-rl;
@@ -1874,12 +1877,8 @@ html {
 
 .slider__list {
   border-radius: 2.125rem;
-}
-
-.slider__list-wrapper {
   border: 1px solid #e5e5e5;
   background-color: #e5e5e5;
-  gap: 1px;
 }
 
 .slider__item {

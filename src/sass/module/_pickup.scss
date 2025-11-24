@@ -17,7 +17,7 @@
   font-weight: var(--regular);
   letter-spacing: 0.12em;
   line-height: 1;
-  margin-bottom: rem(60);
+  margin-bottom: rem(80);
   padding-left: rem(44);
 }
 
@@ -66,6 +66,7 @@
   font-weight: var(--bold);
   line-height: 1.4;
   color: var(--item-color);
+  width: calc(100% + rem(10));
   margin-bottom: rem(16);
 }
 

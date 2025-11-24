@@ -20,6 +20,7 @@
 .slider__title {
   font-family: var(--base-font-family);
   font-size: rem(32);
+  letter-spacing: 0.5em;
   font-weight: var(--bold);
   line-height: normal;
   writing-mode: vertical-rl;
@@ -57,12 +58,11 @@
   // width: 50%;
   // flex-grow: 1;
   border-radius: rem(34);
+  border: 1px solid #e5e5e5;
+  background-color: #e5e5e5;
 }
 
 .slider__list-wrapper {
-  border: 1px solid #e5e5e5;
-  background-color: #e5e5e5;
-  gap: 1px;
 }
 
 .slider__item {

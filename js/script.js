@@ -22,6 +22,7 @@ jQuery(function ($) {
       nextEl: '.slider__button--next',
       prevEl: '.slider__button--prev',
     },
+    spaceBetween: 1,
     speed: 300,
     slidesPerView: 3,
   });
