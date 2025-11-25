@@ -12,6 +12,7 @@
   width: fit-content;
   padding: rem(13) 0;
   border-bottom: 1px solid var(--base-color);
+  position: relative;
 }
 
 .button__icon {
@@ -22,4 +23,35 @@
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
+}
+
+.button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  translate: 50% -50%;
+  width: rem(25);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--yellow);
+  z-index: 3;
+  right: rem(7);
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  .button:hover::after {
+    animation: button-icon 0.9s cubic-bezier(0, 1, 0.6, 1) forwards;
+  }
+}
+
+@keyframes button-icon {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 3;
+  }
 }

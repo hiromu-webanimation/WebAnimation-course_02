@@ -41,6 +41,7 @@
   font-weight: var(--bold);
   padding: rem(10) 0;
   gap: rem(10);
+  position: relative;
   .arrow {
     background-color: var(--black);
     aspect-ratio: 28/13;
@@ -50,6 +51,27 @@
     mask-repeat: no-repeat;
     mask-size: contain;
     mask-position: center;
+  }
+}
+
+.news__link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  translate: 50% -50%;
+  width: rem(25);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--yellow);
+  z-index: 3;
+  right: rem(13);
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  .news__link:hover::after {
+    animation: button-icon 0.9s cubic-bezier(0, 1, 0.6, 1) forwards;
   }
 }
 

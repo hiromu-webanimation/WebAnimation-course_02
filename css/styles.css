@@ -191,6 +191,7 @@ html {
   padding: 13px 0;
   padding: 0.8125rem 0;
   border-bottom: 1px solid #1a1a1a;
+  position: relative;
 }
 
 .button__icon {
@@ -208,6 +209,47 @@ html {
           mask-position: center;
 }
 
+.button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  translate: 50% -50%;
+  width: 25px;
+  width: 1.5625rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #beba3f;
+  z-index: 3;
+  right: 7px;
+  right: 0.4375rem;
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  .button:hover::after {
+    -webkit-animation: button-icon 0.9s cubic-bezier(0, 1, 0.6, 1) forwards;
+            animation: button-icon 0.9s cubic-bezier(0, 1, 0.6, 1) forwards;
+  }
+}
+@-webkit-keyframes button-icon {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 3;
+  }
+}
+@keyframes button-icon {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    scale: 3;
+  }
+}
 .footer {
   position: relative;
   background-color: #736357;
@@ -1119,6 +1161,7 @@ html {
   padding: 0.625rem 0;
   gap: 10px;
   gap: 0.625rem;
+  position: relative;
 }
 .news__link .arrow {
   background-color: #000;
@@ -1136,6 +1179,29 @@ html {
           mask-position: center;
 }
 
+.news__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  translate: 50% -50%;
+  width: 25px;
+  width: 1.5625rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #beba3f;
+  z-index: 3;
+  right: 13px;
+  right: 0.8125rem;
+  opacity: 0;
+}
+
+@media (any-hover: hover) {
+  .news__link:hover::after {
+    -webkit-animation: button-icon 0.9s cubic-bezier(0, 1, 0.6, 1) forwards;
+            animation: button-icon 0.9s cubic-bezier(0, 1, 0.6, 1) forwards;
+  }
+}
 .news__list {
   display: grid;
   gap: 70px;
