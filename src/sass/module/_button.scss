@@ -13,6 +13,8 @@
   padding: rem(13) 0;
   border-bottom: 1px solid var(--base-color);
   position: relative;
+  transition: 0.3s ease-out all;
+  overflow: visible;
 }
 
 .button__icon {
@@ -23,6 +25,9 @@
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
+  position: relative;
+  z-index: 2;
+  transition: 0.3s ease-out all;
 }
 
 .button::after {
@@ -38,20 +43,32 @@
   z-index: 3;
   right: rem(7);
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 @media (any-hover: hover) {
+  .button:hover {
+    border-bottom-color: var(--yellow);
+    color: var(--yellow);
+  }
+
+  .button:hover span {
+    background-color: var(--yellow);
+    transform: translateX(rem(5));
+  }
   .button:hover::after {
-    animation: button-icon 0.9s cubic-bezier(0, 1, 0.6, 1) forwards;
+    opacity: 1;
+    animation: button-ripple 0.8s cubic-bezier(0, 1, 0.6, 1) forwards;
   }
 }
 
-@keyframes button-icon {
-  from {
+@keyframes button-ripple {
+  0% {
     opacity: 1;
+    scale: 1;
   }
-  to {
+  100% {
     opacity: 0;
-    scale: 3;
+    scale: 3.5;
   }
 }

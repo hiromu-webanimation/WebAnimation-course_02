@@ -42,10 +42,24 @@
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
+  cursor: pointer;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slider__button--prev {
   transform: scaleX(-1);
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (any-hover: hover) {
+  .slider__button:hover {
+    background-color: var(--yellow);
+    transform: scale(1.1);
+  }
+
+  .slider__button--prev:hover {
+    transform: scaleX(-1) scale(1.1);
+  }
 }
 
 .slider__list-wrap {
@@ -62,11 +76,9 @@
   background-color: #e5e5e5;
 }
 
-.slider__list-wrapper {
-}
-
 .slider__item {
   background-color: var(--white);
+  display: block;
 }
 
 .slider__item.swiper-slide {
@@ -75,6 +87,11 @@
 
 .slider__item-img {
   aspect-ratio: 430/398;
+  overflow: hidden;
+}
+
+.slider__item-img img {
+  transition: 0.3s ease-in-out all;
 }
 
 .slider__item-content {
@@ -104,6 +121,7 @@
   font-size: rem(14);
   font-weight: var(--bold);
   gap: rem(10);
+  transition: gap 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   .circle-arrow {
     display: block;
     width: rem(34);
@@ -112,6 +130,7 @@
     border: 1px solid var(--base-color);
     display: grid;
     place-content: center;
+    transition: border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     &::after {
       content: '';
       display: block;
@@ -122,6 +141,30 @@
       mask-size: contain;
       mask-position: center;
       background-color: var(--base-color);
+      transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+
+@media (any-hover: hover) {
+  .slider__item:hover {
+    .slider__item-img img {
+      transform: scale(1.05);
+    }
+    .slider__item-link {
+      gap: rem(15);
+      color: var(--yellow);
+    }
+
+    .slider__item-link .circle-arrow {
+      border-color: var(--yellow);
+      background-color: var(--yellow);
+      transform: scale(1.1);
+    }
+
+    .slider__item-link .circle-arrow::after {
+      background-color: var(--white);
+      transform: translateX(rem(2));
     }
   }
 }

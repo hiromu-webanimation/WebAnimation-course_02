@@ -27,6 +27,7 @@
 }
 
 .related-links__item {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .related-links__item-icon {
@@ -34,6 +35,7 @@
   width: rem(96);
   margin-inline: auto;
   margin-bottom: rem(4);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .related-links__item-icon img {
@@ -48,4 +50,20 @@
   letter-spacing: 0.01em;
   line-height: 1;
   text-align: center;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (any-hover: hover) {
+  .related-links__item:hover {
+  }
+
+  .related-links__item:hover .related-links__item-icon {
+    transform: scale(1.15) rotate(5deg);
+    filter: brightness(1.1);
+  }
+
+  .related-links__item:hover .related-links__item-text {
+    color: var(--yellow);
+    transform: translateY(rem(5));
+  }
 }

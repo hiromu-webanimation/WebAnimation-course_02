@@ -82,7 +82,17 @@
 .pickup__item-link {
   color: var(--item-color);
   border-bottom: 1px solid var(--item-color);
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-bottom-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   span {
     background-color: var(--item-color);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+.pickup__item {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pickup__item-img {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -93,6 +93,7 @@
 .fv__sns-item {
   height: rem(22);
   width: rem(22);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   @include mq {
     height: rem(20);
     width: rem(20);
@@ -103,4 +104,15 @@
   height: 100%;
   object-fit: contain;
   width: 100%;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (any-hover: hover) {
+  .fv__sns-item:hover {
+    transform: scale(1.2) translateY(rem(-3));
+  }
+
+  .fv__sns-item:hover .fv__sns-item-img {
+    filter: brightness(1.2);
+  }
 }

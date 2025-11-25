@@ -30,4 +30,21 @@
   transform: translate(-50%, -50%);
   width: rem(128);
   aspect-ratio: 1;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.youtube__icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (any-hover: hover) {
+  .youtube__button:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    filter: brightness(1.1);
+  }
+
+  .youtube__button:hover .youtube__icon {
+    transform: scale(1.1);
+  }
 }
