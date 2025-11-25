@@ -1274,8 +1274,6 @@ html {
   max-width: 80.9375rem;
   margin-inline: auto;
   padding: 0 25px;
-  -webkit-transform: translateX(-2.5rem);
-          transform: translateX(-2.5rem);
 }
 
 .map__img {
@@ -1505,8 +1503,8 @@ html {
   text-align: center;
   border: 1px solid;
   border-radius: 0.25rem;
-  padding: 7px 16px;
-  padding: 0.4375rem 1rem;
+  padding: 7px 12px;
+  padding: 0.4375rem 0.75rem;
   color: #736357;
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 14px;
