@@ -1,0 +1,8 @@
+@use 'global' as *;
+.js-parallax {
+  overflow: hidden;
+}
+
+.js-parallax img {
+  height: calc(100% + 100px);
+}

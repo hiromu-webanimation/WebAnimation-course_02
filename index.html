@@ -227,36 +227,36 @@
       <!-- News -->
       <section class="news">
         <div class="news__inner">
-          <div class="news__header">
+          <div class="news__header js-fade">
             <h2 class="news__title">最新情報</h2>
             <a href="#" class="news__link">
               <span class="text">最新情報一覧はこちら</span>
               <span class="arrow"></span>
             </a>
           </div>
-          <div class="news__list">
-            <article class="news__item">
+          <div class="news__list js-stagger">
+            <article class="news__item js-stagger-item">
               <a href="#" class="news__item-link">
                 <p class="news__item-date">24.11.25</p>
                 <div class="news__item-tag news__item-tag--notice">お知らせ</div>
                 <p class="news__item-title">物価高騰消費拡大支援　HCUポイント還元祭</p>
               </a>
             </article>
-            <article class="news__item">
+            <article class="news__item js-stagger-item">
               <a href="#" class="news__item-link">
                 <p class="news__item-date">24.11.25</p>
                 <div class="news__item-tag news__item-tag--recruit">募集</div>
                 <p class="news__item-title">【職員募集】保育教諭（パートタイム会計年度任用職員）</p>
               </a>
             </article>
-            <article class="news__item">
+            <article class="news__item js-stagger-item">
               <a href="#" class="news__item-link">
                 <p class="news__item-date">24.11.22</p>
                 <div class="news__item-tag news__item-tag--event">イベント</div>
                 <p class="news__item-title">CHRISTMAS MARKET 2024 in MINAOTO特設サイトオープン！</p>
               </a>
             </article>
-            <article class="news__item">
+            <article class="news__item js-stagger-item">
               <a href="#" class="news__item-link">
                 <p class="news__item-date">24.11.22</p>
                 <div class="news__item-tag news__item-tag--notice">お知らせ</div>
@@ -273,7 +273,7 @@
           <h2 class="pickup__title">PICK UP</h2>
           <div class="pickup__list">
             <div class="pickup__item">
-              <img src="./images/pickup_01.png" alt="CHRISTMAS MARKET 2024" class="pickup__item-img" />
+              <img src="./images/pickup_01.jpg" alt="CHRISTMAS MARKET 2024" class="pickup__item-img" />
               <div class="pickup__item-content">
                 <h3 class="pickup__item-title">CHRISTMAS MARKET 2024</h3>
                 <p class="pickup__item-text">今年で3回目となるクリスマスマーケットは会場が増えてお楽しみもいっぱい！</p>
@@ -284,7 +284,7 @@
               </div>
             </div>
             <div class="pickup__item">
-              <img src="./images/pickup_02.png" alt="MUC" class="pickup__item-img" />
+              <img src="./images/pickup_02.jpg" alt="MUC" class="pickup__item-img" />
               <div class="pickup__item-content">
                 <h3 class="pickup__item-title">便利でおトクなHCUアプリ</h3>
                 <p class="pickup__item-text">ご利用いただくとお買い物ごとにポイントがもらえたり、多くの特典が！</p>
@@ -295,7 +295,7 @@
               </div>
             </div>
             <div class="pickup__item">
-              <img src="./images/pickup_03.png" alt="職員募集" class="pickup__item-img" />
+              <img src="./images/pickup_03.jpg" alt="職員募集" class="pickup__item-img" />
               <div class="pickup__item-content">
                 <h3 class="pickup__item-title">水音町で働いてみませんか？</h3>
                 <p class="pickup__item-text">職員の採用情報をまとめています。</p>
@@ -425,21 +425,29 @@
       <section class="photo-town">
         <div class="photo-town__inner">
           <div class="photo-town__gallery photo-town__gallery--1">
-            <img src="./images/photo-town_01.png" alt="写真のまち画像1" class="photo-town__img" />
-            <img src="./images/photo-town_02.png" alt="写真のまち画像2" class="photo-town__img" />
+            <div class="photo-town__gallery01 js-parallax">
+              <img src="./images/photo-town_01.png" alt="写真のまち画像1" class="photo-town__img" />
+            </div>
+            <div class="photo-town__gallery02 js-parallax">
+              <img src="./images/photo-town_02.png" alt="写真のまち画像2" class="photo-town__img" />
+            </div>
           </div>
           <div class="photo-town__content">
-            <h2 class="photo-town__title">写真のまち</h2>
-            <p class="photo-town__subtitle">写真文化首都</p>
-            <p class="photo-town__text">水音町は、写真文化の中心地となる「写真文化首都」として、1990年に「レンズの町」宣言を行いました。<br /><br />世界から誘客する「水音町国際写真フェスティバル」や、高校写真部を対象にした「全国ユースフォトグランプリ」の開催をはじめ、長期にわたる文化事業を通じて、自然と文化と人の出会いを生み出しています。<br /><br />わたしたちはこれからも、世界中の人々に開かれ、世界中の人々が触れ合え、世界中の人々の笑顔が溢れる、「写真文化を核にしたまちづくり」に取り組みます。</p>
-            <a href="#" class="photo-town__link button">
+            <h2 class="photo-town__title js-fade">写真のまち</h2>
+            <p class="photo-town__subtitle js-fade">写真文化首都</p>
+            <p class="photo-town__text js-fade">水音町は、写真文化の中心地となる「写真文化首都」として、1990年に「レンズの町」宣言を行いました。<br /><br />世界から誘客する「水音町国際写真フェスティバル」や、高校写真部を対象にした「全国ユースフォトグランプリ」の開催をはじめ、長期にわたる文化事業を通じて、自然と文化と人の出会いを生み出しています。<br /><br />わたしたちはこれからも、世界中の人々に開かれ、世界中の人々が触れ合え、世界中の人々の笑顔が溢れる、「写真文化を核にしたまちづくり」に取り組みます。</p>
+            <a href="#" class="photo-town__link button js-fade">
               一覧ページ
               <span class="button__icon"></span>
             </a>
           </div>
           <div class="photo-town__gallery photo-town__gallery--2">
-            <img src="./images/photo-town_03.png" alt="写真のまち画像3" class="photo-town__img" />
-            <img src="./images/photo-town_04.png" alt="写真のまち画像4" class="photo-town__img" />
+            <div class="photo-town__gallery03 js-parallax">
+              <img src="./images/photo-town_03.png" alt="写真のまち画像3" class="photo-town__img" />
+            </div>
+            <div class="photo-town__gallery04 js-parallax">
+              <img src="./images/photo-town_04.png" alt="写真のまち画像4" class="photo-town__img" />
+            </div>
           </div>
         </div>
       </section>
@@ -447,7 +455,7 @@
       <!-- Useful Info -->
       <section class="useful-info">
         <div class="useful-info__inner">
-          <h2 class="useful-info__title">お役立ち情報</h2>
+          <h2 class="useful-info__title js-fade">お役立ち情報</h2>
           <div class="useful-info__list">
             <a href="#" class="useful-info__item useful-info__item--app">
               <div class="useful-info__img">
@@ -484,7 +492,7 @@
       </section>
 
       <!-- YouTube -->
-      <section class="youtube">
+      <section class="youtube js-fade">
         <div class="youtube__bg">
           <img src="./images/youtube_01.png" alt="YouTube背景画像" class="youtube__bg-img" />
         </div>
@@ -496,21 +504,21 @@
       <!-- Related Links -->
       <section class="related-links">
         <div class="related-links__inner">
-          <h2 class="related-links__title">関連リンク</h2>
-          <div class="related-links__list">
-            <a href="#" class="related-links__item">
+          <h2 class="related-links__title js-fade">関連リンク</h2>
+          <div class="related-links__list js-stagger">
+            <a href="#" class="related-links__item js-stagger-item">
               <div class="related-links__item-icon">
                 <img src="./images/related-links_01.png" alt="タブレットアイコン" />
               </div>
               <p class="related-links__item-text">文化財デジタルアーカイブ</p>
             </a>
-            <a href="#" class="related-links__item">
+            <a href="#" class="related-links__item js-stagger-item">
               <div class="related-links__item-icon">
                 <img src="./images/related-links_02.png" alt="学校建物アイコン" />
               </div>
               <p class="related-links__item-text">水音町教育委員会</p>
             </a>
-            <a href="#" class="related-links__item">
+            <a href="#" class="related-links__item js-stagger-item">
               <div class="related-links__item-icon">
                 <img src="./images/related-links_03.png" alt="ノートアイコン" />
               </div>

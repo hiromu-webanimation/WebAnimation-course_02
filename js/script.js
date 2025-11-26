@@ -123,7 +123,7 @@ jQuery(function ($) {
         opacity: 1,
         ease: 'power3.out',
       },
-      '-=0.4'
+      '-=0.6'
     )
     .to('.fv__bg-contaienr', {
       maskSize: '500%',
@@ -134,10 +134,10 @@ jQuery(function ($) {
       '.fv__inner',
       {
         opacity: 1,
-        duration: 1,
+        duration: 1.3,
         ease: 'power3.out',
       },
-      '-=1'
+      '-=0.7'
     )
     .to(
       '.header',
@@ -146,6 +146,121 @@ jQuery(function ($) {
         duration: 1,
         ease: 'power3.out',
       },
-      '-=0.3'
+      '-=0.4'
     );
+
+  // parallax
+  let parallaxes = document.querySelectorAll('.js-parallax');
+  parallaxes.forEach((parallax) => {
+    gsap.fromTo(
+      parallax.querySelector('img'),
+      {
+        y: -100,
+      },
+      {
+        y: 0,
+        scrollTrigger: {
+          trigger: parallax,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1,
+        },
+      }
+    );
+  });
+
+  // stagger
+  let staggers = document.querySelectorAll('.js-stagger');
+  staggers.forEach((stagger) => {
+    gsap.fromTo(
+      stagger.querySelectorAll('.js-stagger-item'),
+      {
+        opacity: 0,
+        x: -5,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: stagger,
+          start: 'top 80%',
+        },
+      }
+    );
+  });
+
+  // fadeIn
+  let fades = document.querySelectorAll('.js-fade');
+  fades.forEach((fade) => {
+    gsap.fromTo(
+      fade,
+      {
+        opacity: 0,
+        y: 5,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: fade,
+          start: 'top 80%',
+        },
+      }
+    );
+  });
+
+  // pickup
+
+  gsap.fromTo(
+    '.pickup__item',
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 1,
+      stagger: 0.1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.pickup__list',
+        start: 'top 80%',
+      },
+    }
+  );
+
+  gsap.from('.pickup__item-img', {
+    borderRadius: '0',
+    duration: 0.8,
+    ease: 'power4.inOut',
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: '.pickup__list',
+      start: 'top 80%',
+    },
+  });
+  gsap.from('.pickup__list', {
+    gap: '0px 0px ',
+    duration: 0.8,
+    ease: 'power4.inOut',
+    delay: 0.5,
+    scrollTrigger: {
+      trigger: '.pickup__list',
+      start: 'top 80%',
+    },
+  });
+  gsap.from('.pickup__item-content', {
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power4.inOut',
+    delay: 0.8,
+    scrollTrigger: {
+      trigger: '.pickup__list',
+      start: 'top 80%',
+    },
+  });
 });

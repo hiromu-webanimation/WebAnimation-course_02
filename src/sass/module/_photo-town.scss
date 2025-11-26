@@ -56,9 +56,13 @@
   grid-template-rows: rem(281) rem(459);
 }
 
-.photo-town__gallery--1 .photo-town__img {
+.photo-town__gallery01,
+.photo-town__gallery02 {
   border-radius: 0 rem(32) rem(32) 0;
+  overflow: hidden;
 }
-.photo-town__gallery--2 .photo-town__img {
+.photo-town__gallery03,
+.photo-town__gallery04 {
   border-radius: rem(32) 0 0 rem(32);
+  overflow: hidden;
 }

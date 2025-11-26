@@ -1,6 +1,9 @@
 /* リキッドレイアウト対応 */
 @use 'global' as *;
 
+main {
+  overflow: clip;
+}
 html {
   //~375px
   @media (max-width: 375px) {

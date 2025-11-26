@@ -15,6 +15,10 @@ body {
     display: none !important;
   }
 }
+main {
+  overflow: clip;
+}
+
 @media (max-width: 375px) {
   html {
     font-size: 4.2666666667vw;
@@ -168,6 +172,14 @@ select::-ms-expand {
 
 html {
   word-wrap: break-word;
+}
+
+.js-parallax {
+  overflow: hidden;
+}
+
+.js-parallax img {
+  height: calc(100% + 100px);
 }
 
 .button {
@@ -1288,6 +1300,8 @@ body {
 }
 
 .map {
+  padding-top: 150px;
+  padding-top: 9.375rem;
   margin-bottom: 240px;
   margin-bottom: 15rem;
   position: relative;
@@ -1700,17 +1714,21 @@ body {
   grid-template-rows: 17.5625rem 28.6875rem;
 }
 
-.photo-town__gallery--1 .photo-town__img {
+.photo-town__gallery01,
+.photo-town__gallery02 {
   border-radius: 0 2rem 2rem 0;
+  overflow: hidden;
 }
 
-.photo-town__gallery--2 .photo-town__img {
+.photo-town__gallery03,
+.photo-town__gallery04 {
   border-radius: 2rem 0 0 2rem;
+  overflow: hidden;
 }
 
 .pickup {
-  margin-bottom: 384px;
-  margin-bottom: 24rem;
+  margin-bottom: 234px;
+  margin-bottom: 14.625rem;
 }
 
 .pickup__inner {
@@ -1732,12 +1750,21 @@ body {
   margin-bottom: 5rem;
   padding-left: 44px;
   padding-left: 2.75rem;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .pickup__list {
   display: grid;
   grid-template-columns: 30.6875rem 1fr;
-  grid-template-rows: 19.0625rem 19.0625rem;
+  grid-template-rows: 1fr 1fr;
   gap: 26px 31px;
   gap: 1.625rem 1.9375rem;
 }

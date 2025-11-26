@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .pickup {
-  margin-bottom: rem(384);
+  margin-bottom: rem(234);
 }
 
 .pickup__inner {
@@ -19,12 +19,16 @@
   line-height: 1;
   margin-bottom: rem(80);
   padding-left: rem(44);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: fit-content;
+  display: flex;
 }
-
 .pickup__list {
   display: grid;
   grid-template-columns: rem(491) 1fr;
-  grid-template-rows: rem(305) rem(305);
+  grid-template-rows: 1fr 1fr;
   gap: rem(26) rem(31);
 }
 
