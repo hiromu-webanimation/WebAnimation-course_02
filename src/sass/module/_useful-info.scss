@@ -80,8 +80,8 @@
 
 @media (any-hover: hover) {
   .useful-info__item:hover {
-    transform: translateY(rem(-8)) scale(1.02);
-    box-shadow: 0 rem(12) rem(24) rgba(0, 0, 0, 0.2);
+    transform: translateY(rem(-5)) scale(1.02);
+    box-shadow: 0 rem(12) rem(16) rgba(0, 0, 0, 0.1);
   }
 
   .useful-info__item:hover .useful-info__item-icon {
