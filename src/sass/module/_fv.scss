@@ -1,16 +1,35 @@
 @use 'global' as *;
 
+body {
+  opacity: 0;
+}
+
 .fv {
   height: 100vh;
   min-height: rem(800);
   position: relative;
   margin-bottom: rem(120);
+  z-index: 20;
+}
+
+.fv__copy {
+  opacity: 0;
+  filter: blur(10px);
+  position: absolute;
+  width: rem(400);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .fv__bg-contaienr.swiper {
   height: 100%;
   position: absolute;
   inset: 0;
+  mask-image: url('../images/map_01.png');
+  mask-repeat: no-repeat;
+  mask-position: 50% 50%;
+  opacity: 0;
 }
 
 .fv__bg-img {
@@ -27,6 +46,7 @@
   padding: 0 rem(85);
   z-index: 5;
   position: relative;
+  opacity: 0;
 }
 
 .fv__logo {

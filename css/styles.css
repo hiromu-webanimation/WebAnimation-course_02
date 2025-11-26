@@ -15,10 +15,6 @@ body {
     display: none !important;
   }
 }
-main {
-  overflow: clip;
-}
-
 @media (max-width: 375px) {
   html {
     font-size: 4.2666666667vw;
@@ -550,6 +546,10 @@ html {
   text-align: center;
 }
 
+body {
+  opacity: 0;
+}
+
 .fv {
   height: 100vh;
   min-height: 800px;
@@ -557,12 +557,34 @@ html {
   position: relative;
   margin-bottom: 120px;
   margin-bottom: 7.5rem;
+  z-index: 20;
+}
+
+.fv__copy {
+  opacity: 0;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  position: absolute;
+  width: 400px;
+  width: 25rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .fv__bg-contaienr.swiper {
   height: 100%;
   position: absolute;
   inset: 0;
+  -webkit-mask-image: url("../images/map_01.png");
+          mask-image: url("../images/map_01.png");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: 50% 50%;
+          mask-position: 50% 50%;
+  opacity: 0;
 }
 
 .fv__bg-img {
@@ -587,6 +609,7 @@ html {
   padding: 0 5.3125rem;
   z-index: 5;
   position: relative;
+  opacity: 0;
 }
 
 .fv__logo {
@@ -1326,6 +1349,28 @@ html {
 
 .map__img {
   aspect-ratio: 6125/4600;
+  position: relative;
+  --scale: 0;
+  --opacity: 1;
+}
+.map__img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  aspect-ratio: 1;
+  opacity: var(--opacity);
+  width: 400px;
+  width: 25rem;
+  border-radius: 50%;
+  border: 7px solid white;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transform: scale(var(--scale));
+          transform: scale(var(--scale));
+  z-index: 1;
 }
 
 .map__title {

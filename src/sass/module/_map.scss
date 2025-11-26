@@ -49,6 +49,24 @@
 
 .map__img {
   aspect-ratio: 6125/4600;
+  position: relative;
+  --scale: 0;
+  --opacity: 1;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    aspect-ratio: 1;
+    opacity: var(--opacity);
+    width: rem(400);
+    border-radius: 50%;
+    border: 7px solid white;
+    filter: blur(10px);
+    transform: scale(var(--scale));
+    z-index: 1;
+  }
 }
 
 .map__content {
