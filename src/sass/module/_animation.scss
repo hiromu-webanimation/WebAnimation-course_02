@@ -1,5 +1,9 @@
 @use 'global' as *;
 
+body {
+  opacity: 0;
+}
+
 // fv
 
 .fv__copy {
@@ -53,8 +57,6 @@
   right: 10%;
   width: rem(120);
 }
-
-
 
 // 汎用パララックス
 .js-parallax {
