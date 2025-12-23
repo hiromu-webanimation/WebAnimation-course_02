@@ -1,66 +1,4 @@
 jQuery(function ($) {
-  // animation ===================-
-
-  // ScrollTriggerの設定を統一（invalidateOnRefreshでレイアウト変更を検知）
-  const mapScrollTrigger = {
-    trigger: '.map',
-    start: 'top center',
-  };
-
-  gsap.to('.map__ripples', {
-    opacity: 1,
-    duration: 0.3,
-    ease: 'power2.out',
-    scrollTrigger: mapScrollTrigger,
-  });
-  gsap.to('.map__img', {
-    '--scale': 2,
-    '-opacity': 0,
-    duration: 2.5,
-    delay: 0.2,
-    ease: 'power3.out',
-    scrollTrigger: mapScrollTrigger,
-  });
-
-  gsap.fromTo(
-    '.map__ripple',
-    {
-      scale: 1,
-      opacity: 1,
-    },
-    {
-      scale: 5,
-      opacity: 0,
-      duration: 2.5,
-      stagger: 0.2,
-      ease: 'power3.out',
-      scrollTrigger: {
-        ...mapScrollTrigger,
-        toggleActions: 'play none none none',
-      },
-    }
-  );
-
-  gsap.fromTo(
-    '.map__title',
-    {
-      opacity: 0,
-      scale: 1.05,
-      filter: 'blur(15px)',
-    },
-    {
-      opacity: 1,
-      scale: 1,
-      filter: 'blur(0px)',
-      duration: 1,
-      delay: 0.1,
-      ease: 'power3.out',
-      scrollTrigger: {
-        ...mapScrollTrigger,
-      },
-    }
-  );
-
   // mv swiper
   const swiperMv = new Swiper('.swiper-mv', {
     pagination: {
@@ -74,7 +12,7 @@ jQuery(function ($) {
     autoplay: false, // timeline完了後に開始
   });
 
-  // list swiper
+  // 水音町らしさ swiper
   const swiperList = new Swiper('.swiper-list', {
     navigation: {
       nextEl: '.slider__button--next',
@@ -85,10 +23,11 @@ jQuery(function ($) {
     slidesPerView: 3,
   });
 
-  // op animation
+  // ここからanimation ===================-
+
+  // オープニング
   const op = gsap.timeline({
     onComplete: function () {
-      // timeline完了後にMVのSwiperのautoplayを開始
       swiperMv.params.autoplay.delay = 4500;
       swiperMv.autoplay.start();
     },
@@ -149,73 +88,7 @@ jQuery(function ($) {
       '-=0.4'
     );
 
-  // parallax
-  let parallaxes = document.querySelectorAll('.js-parallax');
-  parallaxes.forEach((parallax) => {
-    gsap.fromTo(
-      parallax.querySelector('img'),
-      {
-        y: -100,
-      },
-      {
-        y: 0,
-        scrollTrigger: {
-          trigger: parallax,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1,
-        },
-      }
-    );
-  });
-
-  // stagger
-  let staggers = document.querySelectorAll('.js-stagger');
-  staggers.forEach((stagger) => {
-    gsap.fromTo(
-      stagger.querySelectorAll('.js-stagger-item'),
-      {
-        opacity: 0,
-        x: -5,
-      },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: stagger,
-          start: 'top 80%',
-        },
-      }
-    );
-  });
-
-  // fadeIn
-  let fades = document.querySelectorAll('.js-fade');
-  fades.forEach((fade) => {
-    gsap.fromTo(
-      fade,
-      {
-        opacity: 0,
-        y: 5,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: fade,
-          start: 'top 80%',
-        },
-      }
-    );
-  });
-
-  // pickup
-
+  // pickupセクション
   gsap.fromTo(
     '.pickup__item',
     {
@@ -232,7 +105,6 @@ jQuery(function ($) {
       },
     }
   );
-
   gsap.from('.pickup__item-img', {
     borderRadius: '0',
     duration: 0.8,
@@ -262,5 +134,130 @@ jQuery(function ($) {
       trigger: '.pickup__list',
       start: 'top 80%',
     },
+  });
+
+  // マップセクション 波紋が広がるアニメーション
+  const mapScrollTrigger = {
+    trigger: '.map',
+    start: 'top center',
+  };
+
+  gsap.to('.map__ripples', {
+    opacity: 1,
+    duration: 0.3,
+    ease: 'power2.out',
+    scrollTrigger: mapScrollTrigger,
+  });
+  gsap.to('.map__img', {
+    '--scale': 2,
+    '-opacity': 0,
+    duration: 2.5,
+    delay: 0.2,
+    ease: 'power3.out',
+    scrollTrigger: mapScrollTrigger,
+  });
+
+  gsap.fromTo(
+    '.map__ripple',
+    {
+      scale: 1,
+      opacity: 1,
+    },
+    {
+      scale: 5,
+      opacity: 0,
+      duration: 2.5,
+      stagger: 0.2,
+      ease: 'power3.out',
+      scrollTrigger: {
+        ...mapScrollTrigger,
+        toggleActions: 'play none none none',
+      },
+    }
+  );
+
+  gsap.fromTo(
+    '.map__title',
+    {
+      opacity: 0,
+      scale: 1.05,
+      filter: 'blur(15px)',
+    },
+    {
+      opacity: 1,
+      scale: 1,
+      filter: 'blur(0px)',
+      duration: 1,
+      delay: 0.1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        ...mapScrollTrigger,
+      },
+    }
+  );
+
+  // 汎用parallax
+  let parallaxes = document.querySelectorAll('.js-parallax');
+  parallaxes.forEach((parallax) => {
+    gsap.fromTo(
+      parallax.querySelector('img'),
+      {
+        y: -100,
+      },
+      {
+        y: 0,
+        scrollTrigger: {
+          trigger: parallax,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1,
+        },
+      }
+    );
+  });
+
+  // 汎用stagger
+  let staggers = document.querySelectorAll('.js-stagger');
+  staggers.forEach((stagger) => {
+    gsap.fromTo(
+      stagger.querySelectorAll('.js-stagger-item'),
+      {
+        opacity: 0,
+        x: -5,
+      },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: stagger,
+          start: 'top 80%',
+        },
+      }
+    );
+  });
+
+  // 汎用fadeIn
+  let fades = document.querySelectorAll('.js-fade');
+  fades.forEach((fade) => {
+    gsap.fromTo(
+      fade,
+      {
+        opacity: 0,
+        y: 5,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: fade,
+          start: 'top 80%',
+        },
+      }
+    );
   });
 });
