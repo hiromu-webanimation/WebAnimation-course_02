@@ -6,6 +6,10 @@ body {
 
 // fv
 
+.fv__inner {
+  opacity: 0;
+}
+
 .fv__copy {
   opacity: 0;
   filter: blur(10px);

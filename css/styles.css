@@ -178,6 +178,10 @@ body {
   opacity: 0;
 }
 
+.fv__inner {
+  opacity: 0;
+}
+
 .fv__copy {
   opacity: 0;
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
@@ -596,8 +600,8 @@ body {
 .footer__nav-item-text {
   color: #fff;
   font-family: 'Zen Kaku Gothic New', sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.5;
   -webkit-transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1213,7 +1217,6 @@ body {
   padding: 0 5.3125rem;
   z-index: 5;
   position: relative;
-  opacity: 0;
 }
 
 .fv__logo {
