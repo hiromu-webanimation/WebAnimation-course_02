@@ -1,7 +1,7 @@
 {
-  "name": "CodeUps",
+  "name": "web-animation-course",
   "version": "1.0.0",
-  "description": "CodeUps専用",
+  "description": "Webアニメーション提案実践講座",
   "main": "index.js",
   "author": "",
   "license": "ISC",
