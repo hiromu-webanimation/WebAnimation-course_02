@@ -1286,28 +1286,6 @@ html {
 
 .map__img {
   aspect-ratio: 6125/4600;
-  position: relative;
-  --scale: 0;
-  --opacity: 1;
-}
-.map__img::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 10%;
-  left: 0;
-  aspect-ratio: 1;
-  opacity: var(--opacity);
-  width: 400px;
-  width: 25rem;
-  border-radius: 50%;
-  border: 7px solid white;
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  -webkit-transform: scale(var(--scale));
-          transform: scale(var(--scale));
-  z-index: 1;
 }
 
 .map__title {
