@@ -88,52 +88,51 @@ op.to('.fv__copy', {
   );
 
 // pickupセクション
-gsap.fromTo(
-  '.pickup__item',
-  {
-    opacity: 0,
+const pickupTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: '.pickup__list',
+    start: 'top 80%',
   },
-  {
-    opacity: 1,
-    duration: 1,
-    stagger: 0.1,
-    ease: 'power3.out',
-    scrollTrigger: {
-      trigger: '.pickup__list',
-      start: 'top 80%',
+});
+
+pickupTl
+  .fromTo(
+    '.pickup__item',
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 1,
+      stagger: 0.1,
+      ease: 'power3.out',
+    }
+  )
+  .from(
+    '.pickup__item-img',
+    {
+      borderRadius: '0',
+      duration: 0.8,
+      ease: 'power4.inOut',
     },
-  }
-);
-gsap.from('.pickup__item-img', {
-  borderRadius: '0',
-  duration: 0.8,
-  ease: 'power4.inOut',
-  delay: 0.5,
-  scrollTrigger: {
-    trigger: '.pickup__list',
-    start: 'top 80%',
-  },
-});
-gsap.from('.pickup__list', {
-  gap: '0px 0px ',
-  duration: 0.8,
-  ease: 'power4.inOut',
-  delay: 0.5,
-  scrollTrigger: {
-    trigger: '.pickup__list',
-    start: 'top 80%',
-  },
-});
-gsap.from('.pickup__item-content', {
-  opacity: 0,
-  duration: 0.8,
-  ease: 'power4.inOut',
-  delay: 0.8,
-  scrollTrigger: {
-    trigger: '.pickup__list',
-    start: 'top 80%',
-  },
-});
+    0.5
+  )
+  .from(
+    '.pickup__list',
+    {
+      gap: '0px 0px',
+      duration: 0.8,
+      ease: 'power4.inOut',
+    },
+    0.5
+  )
+  .from(
+    '.pickup__item-content',
+    {
+      opacity: 0,
+      duration: 0.8,
+      ease: 'power4.inOut',
+    },
+    0.8
+  );
 
 // マップセクション 波紋が広がるアニメーション
 const mapScrollTrigger = {
