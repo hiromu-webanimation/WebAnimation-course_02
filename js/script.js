@@ -1,10 +1,10 @@
 // mv swiper
-const swiperMv = new Swiper('.swiper-mv', {
+const swiperMv = new Swiper(".swiper-mv", {
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
+    el: ".swiper-pagination",
+    type: "bullets",
   },
-  effect: 'fade',
+  effect: "fade",
   fadeEffect: { crossFade: true },
   loop: true,
   speed: 800,
@@ -12,10 +12,10 @@ const swiperMv = new Swiper('.swiper-mv', {
 });
 
 // 水音町らしさ swiper
-const swiperList = new Swiper('.swiper-list', {
+const swiperList = new Swiper(".swiper-list", {
   navigation: {
-    nextEl: '.slider__button--next',
-    prevEl: '.slider__button--prev',
+    nextEl: ".slider__button--next",
+    prevEl: ".slider__button--prev",
   },
   spaceBetween: 1,
   speed: 300,
@@ -31,132 +31,124 @@ const op = gsap.timeline({
     swiperMv.autoplay.start();
   },
 });
-gsap.set('body', {
+gsap.set("body", {
   opacity: 1,
 });
-gsap.set('.header', {
+gsap.set(".header", {
   opacity: 0,
 });
-gsap.set('.fv__bg-contaienr', {
-  maskSize: '30%',
+gsap.set(".fv__bg-contaienr", {
+  maskSize: "30%",
 });
 
-op.to('.fv__copy', {
+op.to(".fv__copy", {
   opacity: 1,
-  filter: 'blur(0px)',
+  filter: "blur(0px)",
 })
   .to(
-    '.fv__copy',
+    ".fv__copy",
     {
       xPercent: -100,
       duration: 1,
       opacity: 0,
-      ease: 'power3.out',
+      ease: "power3.out",
     },
-    '+=0.7'
+    "+=0.7"
   )
   .to(
-    '.fv__bg-contaienr',
+    ".fv__bg-contaienr",
     {
       opacity: 1,
-      ease: 'power3.out',
+      ease: "power3.out",
     },
-    '-=0.6'
+    "-=0.6"
   )
-  .to('.fv__bg-contaienr', {
-    maskSize: '500%',
+  .to(".fv__bg-contaienr", {
+    maskSize: "500%",
     duration: 3,
-    ease: 'power3.inOut',
+    ease: "power3.inOut",
   })
   .to(
-    '.fv__inner',
+    ".fv__inner",
     {
       opacity: 1,
       duration: 1.3,
-      ease: 'power3.out',
+      ease: "power3.out",
     },
-    '-=0.7'
+    "-=0.7"
   )
   .to(
-    '.header',
+    ".header",
     {
       opacity: 1,
       duration: 1,
-      ease: 'power3.out',
+      ease: "power3.out",
     },
-    '-=0.4'
+    "-=0.4"
   );
 
 // pickupセクション
 const pickupTl = gsap.timeline({
   scrollTrigger: {
-    trigger: '.pickup__list',
-    start: 'top 80%',
+    trigger: ".pickup__list",
+    start: "top 80%",
   },
 });
 
 pickupTl
   .fromTo(
-    '.pickup__item',
+    ".pickup__item",
     { opacity: 0 },
     {
       opacity: 1,
       duration: 1,
       stagger: 0.1,
-      ease: 'power3.out',
+      ease: "power3.out",
     }
   )
   .from(
-    '.pickup__item-img',
+    ".pickup__item-img",
     {
-      borderRadius: '0',
+      borderRadius: "0",
       duration: 0.8,
-      ease: 'power4.inOut',
+      ease: "power4.inOut",
     },
-    0.5
+    "-=0.7"
   )
-  .from(
-    '.pickup__list',
-    {
-      gap: '0px 0px',
-      duration: 0.8,
-      ease: 'power4.inOut',
-    },
-    0.5
-  )
-  .from(
-    '.pickup__item-content',
-    {
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power4.inOut',
-    },
-    0.8
-  );
+  .from(".pickup__list", {
+    gap: "0px 0px",
+    duration: 0.8,
+    ease: "power4.inOut",
+  },"<")
+  .from(".pickup__item-content", {
+    opacity: 0,
+    duration: 0.8,
+    ease: "power4.inOut",
+  },"-=0.6");
 
 // マップセクション 波紋が広がるアニメーション
 const mapScrollTrigger = {
-  trigger: '.map',
-  start: 'top center',
+  trigger: ".map",
+  start: "top center",
 };
 
-gsap.to('.map__ripples', {
+gsap.to(".map__ripples", {
   opacity: 1,
   duration: 0.3,
-  ease: 'power2.out',
+  ease: "power2.out",
   scrollTrigger: mapScrollTrigger,
 });
-gsap.to('.map__img', {
-  '--scale': 2,
-  '-opacity': 0,
+gsap.to(".map__img", {
+  "--scale": 2,
+  "-opacity": 0,
   duration: 2.5,
   delay: 0.2,
-  ease: 'power3.out',
+  ease: "power3.out",
   scrollTrigger: mapScrollTrigger,
 });
 
 gsap.fromTo(
-  '.map__ripple',
+  ".map__ripple",
   {
     scale: 1,
     opacity: 1,
@@ -166,28 +158,28 @@ gsap.fromTo(
     opacity: 0,
     duration: 2.5,
     stagger: 0.2,
-    ease: 'power3.out',
+    ease: "power3.out",
     scrollTrigger: {
       ...mapScrollTrigger,
-      toggleActions: 'play none none none',
+      toggleActions: "play none none none",
     },
   }
 );
 
 gsap.fromTo(
-  '.map__title',
+  ".map__title",
   {
     opacity: 0,
     scale: 1.05,
-    filter: 'blur(15px)',
+    filter: "blur(15px)",
   },
   {
     opacity: 1,
     scale: 1,
-    filter: 'blur(0px)',
+    filter: "blur(0px)",
     duration: 1,
     delay: 0.1,
-    ease: 'power3.out',
+    ease: "power3.out",
     scrollTrigger: {
       ...mapScrollTrigger,
     },
@@ -195,10 +187,10 @@ gsap.fromTo(
 );
 
 // 汎用parallax
-let parallaxes = document.querySelectorAll('.js-parallax');
+let parallaxes = document.querySelectorAll(".js-parallax");
 parallaxes.forEach((parallax) => {
   gsap.fromTo(
-    parallax.querySelector('img'),
+    parallax.querySelector("img"),
     {
       y: -100,
     },
@@ -206,8 +198,8 @@ parallaxes.forEach((parallax) => {
       y: 0,
       scrollTrigger: {
         trigger: parallax,
-        start: 'top bottom',
-        end: 'bottom top',
+        start: "top bottom",
+        end: "bottom top",
         scrub: 1,
       },
     }
@@ -215,10 +207,10 @@ parallaxes.forEach((parallax) => {
 });
 
 // 汎用stagger
-let staggers = document.querySelectorAll('.js-stagger');
+let staggers = document.querySelectorAll(".js-stagger");
 staggers.forEach((stagger) => {
   gsap.fromTo(
-    stagger.querySelectorAll('.js-stagger-item'),
+    stagger.querySelectorAll(".js-stagger-item"),
     {
       opacity: 0,
       x: -5,
@@ -228,17 +220,17 @@ staggers.forEach((stagger) => {
       x: 0,
       duration: 0.8,
       stagger: 0.1,
-      ease: 'power2.out',
+      ease: "power2.out",
       scrollTrigger: {
         trigger: stagger,
-        start: 'top 80%',
+        start: "top 80%",
       },
     }
   );
 });
 
 // 汎用fadeIn
-let fades = document.querySelectorAll('.js-fade');
+let fades = document.querySelectorAll(".js-fade");
 fades.forEach((fade) => {
   gsap.fromTo(
     fade,
@@ -250,10 +242,10 @@ fades.forEach((fade) => {
       opacity: 1,
       y: 0,
       duration: 0.8,
-      ease: 'power2.out',
+      ease: "power2.out",
       scrollTrigger: {
         trigger: fade,
-        start: 'top 80%',
+        start: "top 80%",
       },
     }
   );
